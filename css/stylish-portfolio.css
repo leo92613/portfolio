@@ -16,6 +16,23 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.center {
+    margin: auto;
+    width:75%;
+    padding: 10px;
+}
+
+
+.maintext
+{
+  margin: auto;
+  width:75%;
+  padding: 10px;
+font-weight:normal;color:#000000;letter-spacing:2pt;word-spacing:6pt;font-size:1.3em;text-align:left;font-family:trebuchet MS, sans-serif;line-height:2;
+}
+
+
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
