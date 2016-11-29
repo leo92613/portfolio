@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Week2 Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+
+  <!-- Header -->
+    <header id="top" class="headercon">
+        <div class="text-vertical-center">
+
+          <!--  <h3>I work for Future Reality.</h3>-->
+
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="services bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Week 2 Blog </h2>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+    <section id="video" class="portfolio">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Mind Map</h2>
+                    <hr class="small">
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+          <img width="1120" height="630" src="mind.png" ></img>
+
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!-- Description -->
+<section id="description" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Description</h2>
+                <hr class="small">
+            </div>
+        </div>
+
+<div class="maintext">
+            <p>This story is about a man living in a box for his whole life and
+              learn about the world through a TV box. He learns everything including
+              language, fashion, culture, politic and etc. This scence is when the man
+              watching Donald Trump speaking.
+      </p>
+          </div>
+
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<section id="screenshot" class="portfolio">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Screen Shot</h2>
+                <hr class="small">
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+      <img width="1120" height="630" src="screenshot.png" ></img>
+
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>
