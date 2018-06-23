@@ -25,6 +25,9 @@
 
 <body>
 
+
+
+
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -53,6 +56,9 @@
             </li>
         </ul>
     </nav>
+
+
+
 
     <!-- Header -->
     <header id="top" class="header">
@@ -364,6 +370,44 @@
             </div>
         </div>
     </section>
+
+        <!-- Audio -->
+
+<audio id="Amanda" autoplay preload ></audio>
+<script>
+    (function() {
+
+
+
+        window.addEventListener('load', () => {
+            // noinspection JSUnresolvedVariable
+            let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'audio/Wenbo3.mp3');
+            xhr.responseType = 'arraybuffer';
+            xhr.addEventListener('load', () => {
+                let playsound = (audioBuffer) => {
+                    let source = audioCtx.createBufferSource();
+                    source.buffer = audioBuffer;
+                    source.connect(audioCtx.destination);
+                    source.loop = false;
+                    source.start();
+
+                    //setTimeout(function () {
+                        //let t = document.createElement('p');
+                        //t.appendChild(document.createTextNode((new Date()).toLocaleString() + ': Sound played'));                       
+                        //document.querySelector('.output').appendChild(t);
+                        //playsound(audioBuffer);
+                    //}, 1000 + Math.random()*2500);
+                };
+
+                audioCtx.decodeAudioData(xhr.response).then(playsound);
+            });
+            xhr.send();
+        });
+        
+    })();
+    </script>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
