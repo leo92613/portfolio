@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/qrcode.js"></script>
 </head>
 <body>
-<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%" /><br />
+
 <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
 
 <script type="text/javascript">
@@ -18,15 +18,15 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 });
 
 function makeCode () {		
-	var elText = document.getElementById("text");
+	// var elText = "https://medivis.com"
 	
-	if (!elText.value) {
-		alert("Input a text");
-		elText.focus();
-		return;
-	}
+	// if (!elText.value) {
+	// 	alert("Input a text");
+	// 	elText.focus();
+	// 	return;
+	// }
 	
-	qrcode.makeCode(elText.value);
+	qrcode.makeCode("https://medivis.com");
 }
 
 makeCode();
